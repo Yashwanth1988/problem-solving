@@ -1,9 +1,7 @@
 function pyramid(n){
     for(var i=0;i<n;i++){ // rows
-        var stars = '', spaces = ''
-        for(var s=0;s<(n-(i+1));s++){
-            spaces = spaces + ' '
-        }
+        var stars = '', spaces = ' '
+        spaces = spaces.repeat(n-(i+1))
         for(var j=0;j<i+1;j++) { //columns
             stars = stars + '* '
         }
@@ -13,10 +11,8 @@ function pyramid(n){
 
 function reversePyramid(n){
     for(var i=n;i>=0;i--){ // rows
-        var stars = '', spaces = ''
-        for(var s=0;s<(n-i);s++){
-            spaces = spaces + ' '
-        }
+        var stars = '', spaces = ' '
+        spaces = spaces.repeat(n-i)
         for(var j=0;j<i;j++) { //columns
             stars = stars + '* '
         }
